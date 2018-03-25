@@ -1,15 +1,17 @@
-{-# LANGUAGE QuasiQuotes           #-}
-{-# LANGUAGE TypeFamilies          #-}
-{-# LANGUAGE TemplateHaskell       #-}
-{-# LANGUAGE OverloadedStrings     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE OverloadedStrings     #-}
+{-# LANGUAGE QuasiQuotes           #-}
+{-# LANGUAGE TemplateHaskell       #-}
+{-# LANGUAGE TypeFamilies          #-}
 
 module Minimal where
 
-import Yesod
-import Network.Wai.Handler.Warp (run)
-import Data.Text (Text)
+import           Data.Text                (Text)
+import           Network.Wai.Handler.Warp (run)
+import           Yesod.Core               (RenderRoute (..), Yesod, mkYesod,
+                                           parseRoutes, toWaiApp)
 
+-- | This is my data type. There are many like it, but this one is mine.
 data Minimal = Minimal
 
 mkYesod "Minimal" [parseRoutes|

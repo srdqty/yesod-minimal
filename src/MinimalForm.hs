@@ -1,14 +1,24 @@
-{-# LANGUAGE QuasiQuotes           #-}
-{-# LANGUAGE TypeFamilies          #-}
-{-# LANGUAGE TemplateHaskell       #-}
-{-# LANGUAGE OverloadedStrings     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE OverloadedStrings     #-}
+{-# LANGUAGE QuasiQuotes           #-}
+{-# LANGUAGE TemplateHaskell       #-}
+{-# LANGUAGE TypeFamilies          #-}
 module MinimalForm where
 
-import Yesod
-import Control.Applicative ((<$>), (<*>))
-import Data.Text (Text)
-import Network.Wai.Handler.Warp (run)
+import           Control.Applicative      ((<$>), (<*>))
+import           Data.Text                (Text)
+import           Network.Wai.Handler.Warp (run)
+import           Yesod.Core               (HandlerFor, Html, RenderMessage (..),
+                                           RenderRoute (..), Yesod (..), hamlet,
+                                           mkYesod, pageBody, pageHead,
+                                           pageTitle, parseRoutes, setTitle,
+                                           toWaiApp, whamlet,
+                                           widgetToPageContent, withUrlRenderer)
+import           Yesod.Form               (FormMessage (..), FormResult (..),
+                                           MForm, Option (..), areq,
+                                           defaultFormMessage, intField,
+                                           mkOptionList, renderDivs,
+                                           runFormPost, selectField, textField)
 
 data Minimal = Minimal
 

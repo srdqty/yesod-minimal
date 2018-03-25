@@ -2,7 +2,8 @@ name: yesod-minimal
 
 dependencies:
 - base
-- yesod
+- yesod-core
+- yesod-form
 - wai
 - warp
 - text
