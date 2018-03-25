@@ -1,0 +1,26 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 8689e22c4336fb0c324dfe5fdaf75d074f4fb4f19701f7856c94718fe4d5cc2b
+
+name:           yesod-minimal
+version:        0.0.0
+build-type:     Simple
+cabal-version:  >= 1.10
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base
+    , text
+    , wai
+    , warp
+    , yesod
+  exposed-modules:
+      Minimal
+      MinimalForm
+  other-modules:
+      Paths_yesod_minimal
+  default-language: Haskell2010

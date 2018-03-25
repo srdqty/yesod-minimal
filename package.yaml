@@ -1,0 +1,11 @@
+name: yesod-minimal
+
+dependencies:
+- base
+- yesod
+- wai
+- warp
+- text
+
+library:
+    source-dirs: src
