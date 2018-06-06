@@ -2,3 +2,6 @@
 *.hi
 *.o
 *.cabal
+/dist
+/result
+/docker-image.tar.gz

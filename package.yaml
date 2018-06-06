@@ -8,5 +8,21 @@ dependencies:
 - warp
 - text
 
-library:
+executables:
+  yesod-minimal:
+    main: Minimal
     source-dirs: src
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -Wall
+
+  yesod-minimal-form:
+    main: MinimalForm
+    source-dirs: src
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -Wall
