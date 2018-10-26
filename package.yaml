@@ -1,4 +1,5 @@
 name: yesod-minimal
+license: MIT
 
 dependencies:
 - base
@@ -8,5 +9,22 @@ dependencies:
 - warp
 - text
 
-library:
+executables:
+  yesod-minimal:
+    main: Minimal
     source-dirs: src
+    ghc-options:
+      - -Wall
+      - -O2
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+  yesod-minimal-form:
+    main: MinimalForm
+    source-dirs: src
+    ghc-options:
+      - -Wall
+      - -O2
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N

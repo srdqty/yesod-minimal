@@ -2,3 +2,7 @@
 *.hi
 *.o
 *.cabal
+*.swp
+/default.nix
+/dist
+/result
